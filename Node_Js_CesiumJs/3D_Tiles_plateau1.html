@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hello Earth</title>
+	<script src="./Cesium-1.111/Build/CesiumUnminified/Cesium.js"></script>
+	 <link rel="stylesheet" href="./Cesium-1.111/Build/Cesium/Widgets/widgets.css">
+
+	<style>
+		@import url(./Cesium-1.111/Apps/Sandcastle/templates/bucket.css);
+	</style>
+
+</head>
+<body>
+どらnnごん
+	<div id="cesiumContainer" class="fullSize"></div>
+
+<!--script src="./js/3D_Tiles_Feature_Styling.js"></script-->
+<script>
+async function main_f() {
+
+	const viewer = new Cesium.Viewer("cesiumContainer");
+
+	 const tileset = await Cesium.Cesium3DTileset.fromUrl(
+		 './3d_tiles/13101_chiyoda-ku_2020_bldg_low_resolution/tileset.json'
+	 );
+	 viewer.scene.primitives.add(tileset);
+	 //console.log(tileset);
+
+	// カメラの初期位置の指定
+	viewer.camera.setView({
+		destination: Cesium.Cartesian3.fromDegrees(139.76, 35.68, 5000.0)
+	});
+};
+main_f();
+
+	<!--script src="./Cesium-1.111/Build/CesiumUnminified/Cesium.js"></script-->
+	 <!--link rel="stylesheet" href="./Cesium-1.111/Build/Cesium/Widgets/widgets.css"-->
+
+	<!--script src="https://cesium.com/downloads/cesiumjs/releases/1.104/Build/Cesium/Cesium.js"></script-->
+	<!--link href="https://cesium.com/downloads/cesiumjs/releases/1.104/Build/Cesium/Widgets/widgets.css" rel="stylesheet"></head-->
+
+/*
+const viewer = new Cesium.Viewer('cesiumContainer');
+const your_3d_tiles =viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
+	url : "./3d_tiles/13101_chiyoda-ku_2020_bldg_low_resolution/tileset.json"
+}));
+viewer.flyTo(your_3d_tiles);
+*/
+
+</script>
+</body>
+</html>

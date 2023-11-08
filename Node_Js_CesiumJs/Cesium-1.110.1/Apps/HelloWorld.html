@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Use correct character set. -->
+    <meta charset="utf-8" />
+    <!-- Tell IE to use the latest, best version. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Make the application on mobile take up the full browser screen and disable user scaling. -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
+    <title>Hello World!</title>
+    <script src="../Build/CesiumUnminified/Cesium.js"></script>
+    <style>
+      @import url(../Build/CesiumUnminified/Widgets/widgets.css);
+      html,
+      body,
+      #cesiumContainer {
+
+      }
+    </style>
+  </head>
+  <body>
+ <img src="https://www.google.co.jp/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" >
+    <div id="cesiumContainer"></div>
+    <script>
+    	Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2Njc2MjUyNy1jMTRmLTQzYjAtYmU4Yi00ZWRlOTQzMGQ0NTIiLCJpZCI6MTc1NDU5LCJpYXQiOjE2OTkyNTE4Mjh9.Uf4oJ2FV0EVodjfW04nV6PiHwDAZuud0jGb4v5mjg_E';
+    
+      const viewer = new Cesium.Viewer("cesiumContainer");
+      //viewer.dataSources.add(Cesium.KmlDataSource.load('kml/test.kml'));
+ const point2 = viewer.entities.add({
+	name:"福井市", 
+	description:"ここは福井市です。",
+	position : Cesium.Cartesian3.fromDegrees(136.223554,36.061957,0), 
+	point : {
+		pixelSize : 10, 
+		color : Cesium.Color.BLUE
+	}
+});
+
+
+const tileset = viewer.scene.primitives.add(
+    new Cesium.Cesium3DTileset({
+        url: Cesium.IonResource.fromAssetId(43978)//メルボルン　Melbourne, Australia
+    })
+);
+viewer.zoomTo(viewer.entities);
+    </script>
+  </body>
+</html>
