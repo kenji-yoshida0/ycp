@@ -12,7 +12,7 @@
 	 
 </head>
 <body>
-どらごん
+テスト画面
     <div id="cesiumContainer" class="●ullSize"></div>
     
 <script src="./czml/test4.js"></script>
@@ -21,7 +21,7 @@
 	//Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2Njc2MjUyNy1jMTRmLTQzYjAtYmU4Yi00ZWRlOTQzMGQ0NTIiLCJpZCI6MTc1NDU5LCJpYXQiOjE2OTkyNTE4Mjh9.Uf4oJ2FV0EVodjfW04nV6PiHwDAZuud0jGb4v5mjg_E';
 
 	//―――――――――――――――――――――――――――――――――――――――●CesiumViewer　読み込み
-//const viewer = new Cesium.Viewer("cesiumContainer");
+const viewer = new Cesium.Viewer("cesiumContainer");
 
 /*
 const viewer = new Cesium.Viewer("cesiumContainer", {
@@ -29,22 +29,6 @@ const viewer = new Cesium.Viewer("cesiumContainer", {
 });
 //viewer.dataSources.add(Cesium.CzmlDataSource.load(czml));
 */
-
-const viewer = new Cesium.Viewer("cesiumContainer", {
-  shouldAnimate: true,
-});
-
-const dataSourcePromise = viewer.dataSources.add(
-  Cesium.CzmlDataSource.load(czml)
-);
-
-dataSourcePromise
-  .then(function (dataSource) {
-    viewer.trackedEntity = dataSource.entities.getById("model");
-  })
-  .catch(function (error) {
-    window.alert(error);
-  }); 
 
 
 
@@ -75,7 +59,7 @@ const viewer = new Cesium.Viewer("cesiumContainer", {
 
 
 	//―――――――――――――――――――――――――――――――――――――――●kml　読み込み
-	//viewer.dataSources.add(Cesium.KmlDataSource.load('kml/test.kml'));
+	viewer.dataSources.add(Cesium.KmlDataSource.load('kml/テストデータ_MapToKML.kmz'));
 
 	//―――――――――――――――――――――――――――――――――――――――ベースマップの変更
 /*
@@ -268,10 +252,40 @@ const label = viewer.entities.add({
 
 
 */
-
-
+const zahyou = Cesium.Cartesian3.fromDegrees(140.71511933887133,38.05637457654158,  1000.0);
+const camera_zahyou = Cesium.Cartesian3.fromDegrees(140.71511933887133,38.05637457654158,  8000.0);
+	//―――――――――――――――――――――――――――――――――――――――●ホームボタン
+	viewer.homeButton.viewModel.command.beforeExecute.addEventListener(
+		function(e){
+			e.cancel = true;
+			viewer.camera.flyTo({
+				destination:zahyou,
+				orientation:{
+					heading:Cesium.Math.toRadians(0.0),
+					pitch:Cesium.Math.toRadians(-90.0),
+				}
+			});
+		}
+	);
 	//―――――――――――――――――――――――――――――――――――――――●ズーム
-	//viewer.zoomTo(viewer.entities);
+	
+	viewer.entities.add({
+		position:camera_zahyou,
+		label:{
+			text:"テスト:阿武隈川水系河川ライン"
+		}
+	});
+//
+	viewer.zoomTo(viewer.entities);
+
+	viewer.camera.flyTo({
+	destination : Cesium.Cartesian3.fromDegrees(camera_zahyou),
+	orientation: {
+		heading: Cesium.Math.toRadians(0.0),
+		pitch: Cesium.Math.toRadians(-90.0),
+	    },
+	});
+
 
 
 
