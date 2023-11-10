@@ -2,13 +2,10 @@
 <html lang="en">
 <head>
 	 <meta charset="UTF-8">
-	 <title>Hello Earth</title>
-	 <script src="../Cesium-1.111/Build/CesiumUnminified/Cesium.js"></script>
-	 <link rel="stylesheet" href="../Cesium-1.111/Build/Cesium/Widgets/widgets.css">
-	 
-<style>
-	@import url(../Cesium-1.111/Apps/Sandcastle/templates/bucket.css);
-</style>
+	 <title>テスト:国土数値情報・行政区域データ・北海道"</title>
+	 <script src="../node_modules/cesium/Build/CesiumUnminified/Cesium.js"></script>
+	 <link rel="stylesheet" href="../node_modules/cesium/Build/Cesium/Widgets/widgets.css">
+ 	 <link rel="stylesheet" href="../import.css">
 	 
 </head>
 <body>
@@ -256,7 +253,7 @@ const label = viewer.entities.add({
 
 	//―――――――――――――――――――――――――――――――――――――――●kml　読み込み
 	//viewer.dataSources.add(Cesium.KmlDataSource.load('kml/jisaku_test/test1.kml'));
-	viewer.dataSources.add(Cesium.KmlDataSource.load('../kml/test_231110.kmz'));
+	viewer.dataSources.add(Cesium.KmlDataSource.load('../kml/N03-23_01_230101_test_231110.kmz'));
 
 const zahyou = Cesium.Cartesian3.fromDegrees(142.81404570986763, 43.26373396590314,  800000.0);
 //const camera_zahyou = Cesium.Cartesian3.fromDegrees(141.57809589512567,38.86082224954433,  3000.0);
