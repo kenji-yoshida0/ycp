@@ -258,8 +258,8 @@ const label = viewer.entities.add({
 	//viewer.dataSources.add(Cesium.KmlDataSource.load('kml/jisaku_test/test1.kml'));
 	viewer.dataSources.add(Cesium.KmlDataSource.load('../kml/test_231110.kmz'));
 
-const zahyou = Cesium.Cartesian3.fromDegrees(139.81072,35.710029,  40000.0);
-const camera_zahyou = Cesium.Cartesian3.fromDegrees(141.57809589512567,38.86082224954433,  3000.0);
+const zahyou = Cesium.Cartesian3.fromDegrees(142.81404570986763, 43.26373396590314,  800000.0);
+//const camera_zahyou = Cesium.Cartesian3.fromDegrees(141.57809589512567,38.86082224954433,  3000.0);
 	//―――――――――――――――――――――――――――――――――――――――●ホームボタン
 	viewer.homeButton.viewModel.command.beforeExecute.addEventListener(
 		function(e){
@@ -269,20 +269,19 @@ const camera_zahyou = Cesium.Cartesian3.fromDegrees(141.57809589512567,38.860822
 				orientation:{
 					heading:Cesium.Math.toRadians(0.0),
 					pitch:Cesium.Math.toRadians(-90.0),
-				}
+				},
+				duration:0,
 			});
 		}
 	);
 	//―――――――――――――――――――――――――――――――――――――――●ズーム
 	viewer.entities.add({
-		position:Cesium.Cartesian3.fromDegrees(139.81072,35.710029,  4000.0),
+		position:Cesium.Cartesian3.fromDegrees(142.81404570986763, 43.26373396590314,  100.0),
 		label:{
-			text:"テスト:BP001_SHAPE"
+			text:"テスト:国土数値情報・行政区域データ・北海道"
 		}
+		
 	});
-	viewer.zoomTo(viewer.entities);
-
-
 	viewer.camera.flyTo({
 		destination : zahyou,
 		orientation: {
@@ -291,7 +290,7 @@ const camera_zahyou = Cesium.Cartesian3.fromDegrees(141.57809589512567,38.860822
 		    },
 		duration:0,
 	});
-
+	//viewer.zoomTo(viewer.entities);
 /*
 
 
