@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.opengis.net/kml/2.2 http://schemas.opengis.net/kml/2.2.0/ogckml22.xsd http://www.google.com/kml/ext/2.2 http://code.google.com/apis/kml/schema/kml22gx.xsd">
+
+
+<Document>
+    <name>東京スカイツリーと東京タワー</name> <!--データ名を記入-->
+ 
+     <Style id="s_ylw-pushpin"><!--普段のアイコンのスタイルを記述-->
+        <IconStyle>
+            <scale>1.1</scale>
+
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>ff7faa00</color>
+        </LineStyle>
+    </Style>
+ 
+    <Placemark>
+        <name>東京スカイツリー00</name><!--データの名前-->
+        <description>これは、東京スカイツリーです。<br/>ドラゴンタワーとも呼ばれます。</description><!--説明文(htmlで記述できる)-->
+        <LookAt>
+            <longitude>139.8105736546319</longitude><!--経度-->
+            <latitude>35.70869047827442</latitude><!--緯度-->
+            <altitude>0</altitude><!--標高-->
+            <heading>0</heading><!--機首方位、北が0°-->
+            <tilt>53.37</tilt><!--傾き-->
+            <range>2164.7</range><!--範囲-->
+            <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode><!--基準は海面とする-->
+        </LookAt>
+        <styleUrl>#s_ylw-pushpin</styleUrl>
+        <Point>
+            <extrude>1</extrude><!--ポイントの経緯度と標高を記述-->
+            <altitudeMode>relativeToGround</altitudeMode><!--地面を基準にアイコンを配置-->
+            <gx:drawOrder>1</gx:drawOrder>
+            <coordinates>139.8107252956902,35.71002945292051,600</coordinates>
+        </Point>
+    </Placemark>
+ 
+</Document>
+</kml>
