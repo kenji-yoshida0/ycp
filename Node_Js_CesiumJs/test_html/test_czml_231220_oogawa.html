@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="UTF-8">
+	 <title>テスト:25メッシュ"</title>
+	 <script src="../node_modules/cesium/Build/CesiumUnminified/Cesium.js"></script>
+	 <link rel="stylesheet" href="../node_modules/cesium/Build/Cesium/Widgets/widgets.css">
+ 	 <link rel="stylesheet" href="../import.css">
+	  
+</head>
+<body>
+
+<div id="cesiumContainer" class="●ullSize"></div>
+<div style="overflow-y: scroll; height:250px;">
+<pre>
+
+</pre>
+</div>
+
+
+<!--script src="/czml/test_231128_ten.czml"></script-->
+<script>
+	//―――――――――――――――――――――――――――――――――――――――●アクセストークン
+	Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2Njc2MjUyNy1jMTRmLTQzYjAtYmU4Yi00ZWRlOTQzMGQ0NTIiLCJpZCI6MTc1NDU5LCJpYXQiOjE2OTkyNTE4Mjh9.Uf4oJ2FV0EVodjfW04nV6PiHwDAZuud0jGb4v5mjg_E';
+	//Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI5N2UyMjcwOS00MDY1LTQxYjEtYjZjMy00YTU0ZTg5MmViYWQiLCJpZCI6ODAzMDYsImlhdCI6MTY0Mjc0ODI2MX0.dkwAL1CcljUV7NA7fDbhXXnmyZQU_c-G5zRx8PtEcxE';//プラトーテライン
+
+	//―――――――――――――――――――――――――――――――――――――――●CesiumViewer　読み込み
+	//const viewer = new Cesium.Viewer("cesiumContainer");
+
+
+	//――――――――――――――――――――――――――●―――――――――――――CZML　読み込み
+
+const viewer = new Cesium.Viewer("cesiumContainer", {
+	//shouldAnimate: true,
+	//terrain: Cesium.Terrain.fromWorldTerrain(),
+	//TerrainProvider: new Cesium.Terrain(Cesium.CesiumTerrainProvider.fromUrl('/geo/SampleData/ZionNationalPark.tiff')),
+});
+
+
+/*
+viewer.dataSources.add(
+  Cesium.CzmlDataSource.load("czml")
+);
+*/
+
+//const viewer = new Cesium.Viewer("cesiumContainer");
+
+//viewer.dataSources.add(Cesium.CzmlDataSource.load(czml));
+//viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/test_231128_ori_ani_polygon.czml"));
+
+//viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/test_231128_ori_ani_polygon.czml"));
+//viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/test_231213_model.czml"));
+
+//viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/test_231128_ori_ani_polygon_MAXALL_itv0.czml"));
+
+/*
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes1.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes2.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes3.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes4.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes5.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes6.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes7.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes8.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes9.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes10.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes11.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes12.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes13.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes14.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes15.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes16.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes17.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes18.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes19.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes20.czml"));
+*/
+
+
+/*
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes21.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes22.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes23.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes24.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes25.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes26.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes27.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes28.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes29.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test2/test_czml_dvtes30.czml"));
+
+
+
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test/test_231128_ori_ani_polygon_dv1.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test/test_231128_ori_ani_polygon_dv2.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test/test_231128_ori_ani_polygon_dv3.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test/test_231128_ori_ani_polygon_dv4.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test/test_231128_ori_ani_polygon_dv5.czml"));
+
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test/test_231128_ori_ani_polygon_dv6.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test/test_231128_ori_ani_polygon_dv7.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test/test_231128_ori_ani_polygon_dv8.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test/test_231128_ori_ani_polygon_dv9.czml"));
+viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/dv/test/test_231128_ori_ani_polygon_dv10.czml"));
+
+*/
+//viewer.dataSources.add(Cesium.CzmlDataSource.load("/czml/test_sinsui_maxall.czml"));
+
+
+
+
+	//―――――――――――――――――――――――――――――――――――――――●kml　読み込み
+	viewer.dataSources.add(Cesium.KmlDataSource.load('../kml/大川/MAXALL_TIME2@.kmz'));
+	//viewer.dataSources.add(Cesium.KmlDataSource.load('../kml/大川/MAXALL_TIME5/doc.kml'));
+	//viewer.dataSources.add(Cesium.KmlDataSource.load('../kml/七北田川/MAXALL_TIME/doc.kml'));
+	//viewer.dataSources.add(Cesium.KmlDataSource.load('../kml/N03-23_01_230101_test_231110.kmz'));
+
+
+
+//const zahyou = Cesium.Cartesian3.fromDegrees(140.86827830903314,38.32615498200994,  20000.0);//仙台市　七北田川
+const zahyou = Cesium.Cartesian3.fromDegrees(141.559688, 38.903958,  20000.0);//気仙沼
+//const zahyou = Cesium.Cartesian3.fromDegrees(141.36406629276084,43.06289723271523,  600.0);//札幌～バスセンター辺り
+//const zahyou = Cesium.Cartesian3.fromDegrees(141.57809589512567,38.89082224954433,  50000.0);
+//const zahyou = Cesium.Cartesian3.fromDegrees(143.05365098142144, 44.47607230106117,   50000.0);//紋別
+//const camera_zahyou = Cesium.Cartesian3.fromDegrees(141.57809589512567,38.86082224954433,  3000.0);
+	//―――――――――――――――――――――――――――――――――――――――●ホームボタン
+	viewer.homeButton.viewModel.command.beforeExecute.addEventListener(
+		function(e){
+			e.cancel = true;
+			viewer.camera.flyTo({
+				destination:zahyou,
+				orientation:{
+					heading:Cesium.Math.toRadians(0.0),
+					pitch:Cesium.Math.toRadians(-90.0),
+				},
+				duration:0,
+			});
+		}
+	);
+	//―――――――――――――――――――――――――――――――――――――――●ズーム
+	const zahyou2 = Cesium.Cartographic.fromCartesian(zahyou) // Cartesian3オブジェクトをCartographicオブジェクトに変換　zahyouの高さだけ変える為の処理
+	zahyou2.height = 20000.0 // 高度を変更
+
+	const main_label = viewer.entities.add({
+		position: Cesium.Cartesian3.fromRadians(zahyou2.longitude, zahyou2.latitude, zahyou2.height),
+		label:{
+			text:"テスト"
+		}
+	});
+
+	viewer.camera.flyTo({
+		destination : zahyou,
+		orientation: {
+			heading: Cesium.Math.toRadians(0.0),
+			pitch: Cesium.Math.toRadians(-90.0),
+		    },
+		duration:0,
+	});
+	//viewer.zoomTo(viewer.entities);
+/*
+
+*/
+
+
+/*
+const viewer = new Cesium.Viewer("cesiumContainer", {
+	baseLayerPicker: true,
+	timeline : false,
+	animation : false,
+	homeButton: false,
+	vrButton: true,
+	geocoder:false,
+	sceneModePicker:false,
+	navigationHelpButton:false
+});
+*/
+
+</script>
+</body>
+</html>
