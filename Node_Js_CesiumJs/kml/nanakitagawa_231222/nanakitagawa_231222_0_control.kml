@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+    <Document id="47">
+        <Folder id="6228">
+            <name>災害別避難所</name>
+            <open>1</open>
+            <NetworkLink id="6229">
+                <name>避難所：洪水</name>
+                <visibility>1</visibility>
+                <open>0</open>
+                <description>七北田川231222の洪水時の避難所です。</description>
+                <refreshVisibility>1</refreshVisibility>
+                <flyToView>0</flyToView>
+                <Link id="6230">
+                    <href>./nanakitagawa_231222.kmz/nanakitagawa_231222_shelter_flood.kml</href>
+                </Link>
+            </NetworkLink>
+            <NetworkLink id="6231">
+                <name>避難所：地震</name>
+                <visibility>0</visibility>
+                <open>0</open>
+                <description>七北田川231222の地震時の避難所です。</description>
+                <refreshVisibility>0</refreshVisibility>
+                <flyToView>0</flyToView>
+                <Link id="6232">
+                    <href>./nanakitagawa_231222.kmz/nanakitagawa_231222_shelter_jishin.kml</href>
+                </Link>
+            </NetworkLink>
+            <NetworkLink id="6233">
+                <name>避難所：まちの浸水</name>
+                <visibility>0</visibility>
+                <open>0</open>
+                <description>七北田川231222のまちの浸水の避難所です。</description>
+                <refreshVisibility>0</refreshVisibility>
+                <flyToView>0</flyToView>
+                <Link id="6234">
+                    <href>./nanakitagawa_231222.kmz/nanakitagawa_231222_shelter_naisui.kml</href>
+                </Link>
+            </NetworkLink>
+            <NetworkLink id="6235">
+                <name>避難所：津波</name>
+                <visibility>0</visibility>
+                <open>0</open>
+                <description>七北田川231222の津波時の避難所です。</description>
+                <refreshVisibility>0</refreshVisibility>
+                <flyToView>0</flyToView>
+                <Link id="6236">
+                    <href>./nanakitagawa_231222.kmz/nanakitagawa_231222_shelter_tsunami.kml</href>
+                </Link>
+            </NetworkLink>
+            <NetworkLink id="6237">
+                <name>避難所：高潮</name>
+                <visibility>0</visibility>
+                <open>0</open>
+                <description>七北田川231222の高潮時の避難所です。</description>
+                <refreshVisibility>0</refreshVisibility>
+                <flyToView>0</flyToView>
+                <Link id="6238">
+                    <href>./nanakitagawa_231222.kmz/nanakitagawa_231222_shelter_takashio.kml</href>
+                </Link>
+            </NetworkLink>
+            <NetworkLink id="6239">
+                <name>避難所：火山</name>
+                <visibility>0</visibility>
+                <open>0</open>
+                <description>七北田川231222の火山災害時の避難所です。</description>
+                <refreshVisibility>0</refreshVisibility>
+                <flyToView>0</flyToView>
+                <Link id="6240">
+                    <href>./nanakitagawa_231222.kmz/nanakitagawa_231222_shelter_kazan.kml</href>
+                </Link>
+            </NetworkLink>
+            <NetworkLink id="6241">
+                <name>避難所：土砂災害</name>
+                <visibility>0</visibility>
+                <open>0</open>
+                <description>七北田川231222の土砂災害時の避難所です。</description>
+                <refreshVisibility>0</refreshVisibility>
+                <flyToView>0</flyToView>
+                <Link id="6242">
+                    <href>./nanakitagawa_231222.kmz/nanakitagawa_231222_shelter_dosya.kml</href>
+                </Link>
+            </NetworkLink>
+            <NetworkLink id="6243">
+                <name>避難所：大火事</name>
+                <visibility>0</visibility>
+                <open>0</open>
+                <description>七北田川231222の大火事の避難所です。</description>
+                <refreshVisibility>0</refreshVisibility>
+                <flyToView>0</flyToView>
+                <Link id="6244">
+                    <href>./nanakitagawa_231222.kmz/nanakitagawa_231222_shelter_kaji.kml</href>
+                </Link>
+            </NetworkLink>
+        </Folder>
+        <Folder id="6245">
+            <name>浸水想定区域図</name>
+            <open>1</open>
+            <NetworkLink id="6246">
+                <name>MAXALL_TIME2@の浸水想定</name>
+                <visibility>1</visibility>
+                <open>0</open>
+                <description>MAXALL_TIME2@の浸水想定</description>
+                <refreshVisibility>0</refreshVisibility>
+                <flyToView>0</flyToView>
+                <Link id="6247">
+                    <href>./nanakitagawa_231222.kmz/nanakitagawa_231222_flood1.kmz</href>
+                </Link>
+            </NetworkLink>
+        </Folder>
+        <ScreenOverlay id="6248">
+            <name>title:七北田川231222浸水予想図</name>
+            <visibility>1</visibility>
+            <Icon id="6249">
+                <href>./nanakitagawa_231222.kmz/img/title.jpg</href>
+            </Icon>
+            <overlayXY x="0" y="1" xunits="fraction" yunits="fraction"/>
+            <screenXY x="0" y="1" xunits="fraction" yunits="fraction"/>
+            <rotationXY x="0" y="0" xunits="fraction" yunits="fraction"/>
+            <size x="0.25" y="0" xunits="fraction" yunits="fraction"/>
+        </ScreenOverlay>
+        <ScreenOverlay id="6250">
+            <name>洪水時に想定される浸水深</name>
+            <visibility>1</visibility>
+            <Icon id="6251">
+                <href>./nanakitagawa_231222.kmz/img/legend.jpg</href>
+            </Icon>
+            <overlayXY x="1" y="0" xunits="fraction" yunits="fraction"/>
+            <screenXY x="1" y="0.1" xunits="fraction" yunits="fraction"/>
+            <rotationXY x="0" y="0" xunits="fraction" yunits="fraction"/>
+            <size x="0.15" y="0" xunits="fraction" yunits="fraction"/>
+        </ScreenOverlay>
+        <ScreenOverlay id="6252">
+            <name>浸水深について</name>
+            <visibility>0</visibility>
+            <Icon id="6253">
+                <href>./nanakitagawa_231222.kmz/img/shinsuisin_color_blue_whiteline.jpg</href>
+            </Icon>
+            <overlayXY x="1" y="0" xunits="fraction" yunits="fraction"/>
+            <screenXY x="0.75" y="0.2" xunits="fraction" yunits="fraction"/>
+            <rotationXY x="0" y="0" xunits="fraction" yunits="fraction"/>
+            <size x="0.6" y="0" xunits="fraction" yunits="fraction"/>
+        </ScreenOverlay>
+        <ScreenOverlay id="6254">
+            <name>地図記号について</name>
+            <visibility>0</visibility>
+            <Icon id="6255">
+                <href>./nanakitagawa_231222.kmz/img/map-icon2.jpg</href>
+            </Icon>
+            <overlayXY x="1" y="0" xunits="fraction" yunits="fraction"/>
+            <screenXY x="0.75" y="0.2" xunits="fraction" yunits="fraction"/>
+            <rotationXY x="0" y="0" xunits="fraction" yunits="fraction"/>
+            <size x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+        </ScreenOverlay>
+        <ScreenOverlay id="6256">
+            <name>寒地土木研究所</name>
+            <visibility>1</visibility>
+            <Icon id="6257">
+                <href>./nanakitagawa_231222.kmz/img/ceri_logo.jpg</href>
+            </Icon>
+            <overlayXY x="0" y="0" xunits="fraction" yunits="fraction"/>
+            <screenXY x="0" y="0.0" xunits="fraction" yunits="fraction"/>
+            <rotationXY x="0" y="0" xunits="fraction" yunits="fraction"/>
+            <size x="0.1" y="0" xunits="fraction" yunits="fraction"/>
+        </ScreenOverlay>
+    </Document>
+</kml>
